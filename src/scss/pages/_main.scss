@@ -1,0 +1,295 @@
+.main {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0;
+    .container {
+        width: 100%;
+    }
+    &__bg {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+       
+    }
+    &__wrapper {
+        padding-top: 16.3rem;
+        padding-left: 15.1rem;
+        padding-bottom: 13.8rem;
+        
+    }
+
+    &__title {
+        color: #FFF;
+        font-family: 'Lora';
+        font-size: 6.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 3rem;
+        position: relative;
+        &::before {
+            position: absolute;
+            content:'';
+            width: 19.1rem;
+            height: 0.2rem;
+            background: #FFF;
+            top: 50%;
+            left: -15.2rem;
+            transform: translate(0, -50%);
+        }
+    }
+
+    &__offer {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        color: #FFF;
+        font-size: 2.8rem;
+        font-style: normal;
+        line-height: normal;
+        padding-left: 10.1rem;
+        margin-bottom: 5.6rem;
+        &::before {
+            position: absolute;
+            content:'';
+            width: 7rem;
+            height: 7rem;
+            background-image: url(./assets/images/main/wallet.svg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            left: 0;
+        }
+        strong {
+            font-weight: 700;
+            display: block;
+        }
+
+        span {
+            display: block;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        &-text {
+            color: #FFF;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            padding-right: 3.7rem;
+            position: relative;
+            width: fit-content;
+            margin-bottom: 1.5rem;
+            &::before {
+                position: absolute;
+                content:'';
+                width: 3.4rem;
+                height: 6.4rem;
+                top: 1rem;
+                right: 0;
+                background-image: url(./assets/images/main/circlearrow.svg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+
+        &-btn {
+            border: 1px solid #FFF;
+            padding: 1.8rem 3.2rem;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            width: fit-content;
+            color: #FFF;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: -0.16px;
+            text-transform: uppercase;
+            transition:  0.3s ease-out;
+            flex-shrink: 0;
+            position: relative;
+            overflow: hidden;
+	&::after {
+		content: "";
+		width: 110%;
+		height: 300%;
+		background: #F2A22E;
+		border-radius: 50%;
+		position: absolute;
+		z-index: 1;
+		transform: translateY(100%);
+		transition: transform 0.3s ease-in-out 0.2s;
+	}
+	span {
+		color: #fff;
+		display: block;
+		position: absolute;
+		z-index: 2;
+		transform: translateY(250%);
+		transition: transform 0.3s ease-in-out;
+	}
+
+	&:hover {
+        border: 1px solid #F2A22E;
+		&::after {
+			transition: transform 0.3s ease-in-out;
+			transform: translateY(0);
+		}
+		span {
+			transition: transform 0.3s ease-in-out 0.2s;
+			transform: translateY(0);
+		}
+	    }
+
+       
+        }
+
+       
+    }
+
+    &__box {
+        position: absolute;
+        &-inner {
+            position: relative;
+            width: fit-content;
+            padding-right: 1.5rem;
+        }
+
+        &-content {
+            padding: 1.8rem 3.2rem;
+            border-radius: 1.5rem;
+            background: rgba(0, 43, 69, 0.90);
+            backdrop-filter: blur(2px);
+            color: #FFF;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            width: fit-content;
+        }
+
+        &-circle {
+            width: 3.1rem;
+            height: 3.1rem;
+            position: absolute;
+            right: 0;
+            z-index: 2;
+            top: 50%;
+            transform: translate(0, -50%);
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &__box.one {
+        top: 5.3rem;
+        left: 54.8rem;
+    }
+
+    &__box.two {
+        left: 95.9rem;
+        top: 20.3rem;
+    }
+
+    &__box.three {
+        top: 40.3rem;
+        left: 89.1rem;
+    }
+   
+}
+
+
+@media (max-width: 48em) { 
+
+    .main {
+        overflow: hidden;
+        &::after {
+            position: absolute;
+            content:'';
+            background-color: rgba(0, 0, 0, 0.30);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            z-index: 1;
+        }
+        .container {
+            padding: 0 2rem;
+        }
+
+        &__wrapper {
+            padding-top: 15.3rem;
+            padding-left: 0rem;
+            padding-bottom: 13.8rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        &__title {
+            font-size: 5.4rem;
+            padding-left: 0;
+            margin-bottom: 5rem;
+            &::before {
+                display: none;
+            }
+        }
+
+        &__box {
+            &-content {
+                font-size: 2.2rem;
+            }
+
+            &-inner {
+                padding-right: 2.5rem;
+            }
+
+            &-circle {
+                width: 4.4rem;
+                height: 4.4rem;
+            }
+        }
+
+        &__offer {
+            font-size: 3rem;
+            margin-bottom: 15rem;
+        }
+
+        &__info {
+            &-text {
+                margin-bottom: 3rem;
+                font-size: 2.4rem;
+                padding-right: 0;
+                &::before {
+                    display: none;
+                }
+            }
+
+            &-btn {
+                font-size: 2.5rem;
+            }
+        }
+
+        &__box.one {
+            left: 33.8rem;
+        }
+
+        &__box.two {
+            left: 37.9rem;
+            top: 44.3rem;
+        }
+
+        &__box.three {
+            top: 66.3rem;
+            left: 38.1rem;
+        }
+    }
+
+ }

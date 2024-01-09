@@ -1,0 +1,23 @@
+@import "./scss/fonts";
+@import "./scss/libs/settings";
+@import "./scss/libs/set";
+@import "./scss/style";
+
+@import "./scss/components/header";
+@import "./scss/components/footer";
+@import "./scss/pages/main";
+@import "./scss/pages/advantages";
+@import "./scss/pages/catalog";
+
+.mobile {
+	display: none;
+}
+
+@media (max-width: 48em) {
+	.mobile {
+		display: block;
+	}
+	.desktop {
+		display: none;
+	}
+}
